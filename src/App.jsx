@@ -1,10 +1,12 @@
 import LogoCard from "./components/LogoCard";
 import "./index.css";
+import ControlPanel from "./components/ControlPanel";
 
 const App = () => {
   return (
     <div className="flex flex-col items-center">
       <h1 className="text-4xl my-4">Lightsketch</h1>
+      <ControlPanel />
       <LogoCard
         description="1Password helps you keep your digital life secure by storing passwords, credit card details, and documents in an encrypted vault. Generate strong passwords, access your data from any device, and enjoy peace of mind with 1Password\\'s robust security features."
         title="Secure your digital life"
