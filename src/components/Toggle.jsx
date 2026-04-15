@@ -11,7 +11,7 @@ const Toggle = (props) => {
   };
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center mx-4">
       <label htmlFor={label}>{label}:</label>
       <button
         id={label}

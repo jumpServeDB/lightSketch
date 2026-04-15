@@ -3,9 +3,12 @@ import { useEffect, useState, useMemo } from "react";
 import LogoCard from "./LogoCard";
 import { useContext } from "react";
 import ThemeContext from "../contexts/DarkModeContext";
+import MemoContext from "../contexts/MemoContext";
+import LogoCardMemo from "./LogoCardMemo";
 
 const CardHolder = () => {
   const { isDarkMode } = useContext(ThemeContext);
+  const { isMemo } = useContext(MemoContext);
   const [logos, setlogos] = useState([]);
   useEffect(() => {
     const getLogos = async () => {
@@ -21,11 +24,11 @@ const CardHolder = () => {
   }, []);
 
   // useMemo here so that all cards do not re-render on dark mode theme change:
-  const cardList = useMemo(
+  const cardListMemo = useMemo(
     () =>
       logos.map((item) => (
-        <LogoCard
-          key={`${item.name}-${item.variant}-${item.version}`}
+        <LogoCardMemo
+          key={`${item.name}-${item.variant}-${item.version}-memo`}
           description={item.example_description}
           title={item.example_title}
           logo={item.logo}
@@ -35,6 +38,16 @@ const CardHolder = () => {
     [logos],
   );
 
+  const cardList = logos.map((item) => (
+    <LogoCard
+      key={`${item.name}-${item.variant}-${item.version}`}
+      description={item.example_description}
+      title={item.example_title}
+      logo={item.logo}
+      name={item.name}
+    />
+  ));
+
   return (
     <div
       className={
@@ -43,7 +56,7 @@ const CardHolder = () => {
           : "flex flex-wrap justify-center"
       }
     >
-      {cardList}
+      {isMemo ? cardListMemo : cardList}
     </div>
   );
 };
