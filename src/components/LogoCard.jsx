@@ -46,7 +46,7 @@ const LogoCard = (props) => {
         type="button"
         onClick={openWebsite}
         className={clsx(
-          "w-full  text-white py-2.5 rounded-lg  hover:scale-105 transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-pink-400",
+          "w-full  text-white py-2.5 rounded-lg  hover:scale-105 transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-400",
           themeContext.isDarkMode
             ? "bg-pink-600 hover:bg-700"
             : "bg-pink-500 hover:bg-pink-600",

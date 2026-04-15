@@ -28,7 +28,8 @@ const App = () => {
           },
         }}
       >
-        <div
+        <main
+          id="main"
           className={clsx(
             "flex flex-col items-center h-full",
             isDarkMode
@@ -45,7 +46,7 @@ const App = () => {
             logo="https://logotypes.dev/static/logos/1password-glyph-color.svg"
             name="1password"
           />
-        </div>
+        </main>
       </ThemeContext.Provider>
     </MemoContext.Provider>
   );
