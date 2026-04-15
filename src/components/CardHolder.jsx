@@ -10,8 +10,11 @@ const CardHolder = () => {
   const { isDarkMode } = useContext(ThemeContext);
   const { isMemo } = useContext(MemoContext);
   const [logos, setlogos] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     const getLogos = async () => {
+      setIsLoading(true);
       const json = await apiFetch();
       const data = json.records;
       const results = Object.entries(data).flatMap(([key, arr]) =>
@@ -19,7 +22,7 @@ const CardHolder = () => {
       );
       const doubled = results.concat(results);
       setlogos(doubled);
-      console.log(doubled);
+      setIsLoading(false);
     };
     getLogos();
   }, []);
@@ -57,6 +60,12 @@ const CardHolder = () => {
           : "flex flex-wrap justify-center"
       }
     >
+      {isLoading && (
+        <img
+          src="loadingSpinner.png"
+          className="animate-spin h-12 w-12 mt-20"
+        />
+      )}
       {isMemo ? cardListMemo : cardList}
     </div>
   );

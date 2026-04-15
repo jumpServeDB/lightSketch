@@ -10,7 +10,7 @@ const ControlPanel = () => {
   return (
     <div className="my-4 flex">
       <Toggle label="Dark Mode" action={themeContext.toggleDarkMode} />
-      <Toggle label="Memoization" action={memoContext.toggleMemo} />
+      <Toggle label="Memo" action={memoContext.toggleMemo} />
     </div>
   );
 };
