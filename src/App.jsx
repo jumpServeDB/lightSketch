@@ -4,6 +4,7 @@ import ControlPanel from "./components/ControlPanel";
 import { useState } from "react";
 import clsx from "clsx";
 import ThemeContext from "./contexts/DarkModeContext";
+import CardHolder from "./components/CardHolder";
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -27,6 +28,7 @@ const App = () => {
       >
         <h1 className="text-4xl my-4">Lightsketch</h1>
         <ControlPanel />
+        <CardHolder />
         <LogoCard
           description="1Password helps you keep your digital life secure by storing passwords, credit card details, and documents in an encrypted vault. Generate strong passwords, access your data from any device, and enjoy peace of mind with 1Password\\'s robust security features."
           title="Secure your digital life"

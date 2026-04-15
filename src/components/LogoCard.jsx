@@ -18,7 +18,7 @@ const LogoCard = (props) => {
     <article
       aria-labelledby={name}
       className={clsx(
-        "backdrop-blur-lg  rounded-2xl p-6 shadow-lg hover:shadow-2xl  transition-all duration-300 flex flex-col group w-full max-w-md",
+        "backdrop-blur-lg  rounded-2xl p-6 shadow-lg hover:shadow-2xl  transition-all duration-300 flex flex-col group w-full max-w-md m-4",
         themeContext.isDarkMode
           ? "bg-slate-700 hover:bg-slate-600 text-slate-200 hover:text-slate-100"
           : "bg-white/30 border border-white/50 hover:bg-white/40",
