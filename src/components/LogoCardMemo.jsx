@@ -1,6 +1,6 @@
 import React from "react";
 
-const LogoCard = (props) => {
+const LogoCardMemo = (props) => {
   const { description, title, logo, name } = props;
 
   const openWebsite = () => {
@@ -50,4 +50,4 @@ const LogoCard = (props) => {
   );
 };
 
-export default React.memo(LogoCard);
+export default React.memo(LogoCardMemo);
