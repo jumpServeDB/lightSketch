@@ -17,8 +17,9 @@ const CardHolder = () => {
       const results = Object.entries(data).flatMap(([key, arr]) =>
         arr.map((item) => ({ ...item, group: key })),
       );
-      setlogos(results);
-      console.log(results);
+      const doubled = results.concat(results);
+      setlogos(doubled);
+      console.log(doubled);
     };
     getLogos();
   }, []);
@@ -26,9 +27,9 @@ const CardHolder = () => {
   // useMemo here so that all cards do not re-render on dark mode theme change:
   const cardListMemo = useMemo(
     () =>
-      logos.map((item) => (
+      logos.map((item, i) => (
         <LogoCardMemo
-          key={`${item.name}-${item.variant}-${item.version}-memo`}
+          key={`${item.name}-${item.variant}-${item.version}-${i}-memo`}
           description={item.example_description}
           title={item.example_title}
           logo={item.logo}
@@ -38,9 +39,9 @@ const CardHolder = () => {
     [logos],
   );
 
-  const cardList = logos.map((item) => (
+  const cardList = logos.map((item, i) => (
     <LogoCard
-      key={`${item.name}-${item.variant}-${item.version}`}
+      key={`${item.name}-${item.variant}-${item.version}-${i}`}
       description={item.example_description}
       title={item.example_title}
       logo={item.logo}
