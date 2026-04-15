@@ -18,7 +18,7 @@ const Toggle = (props) => {
       <button
         id={`toggle-${label}`}
         type="button"
-        aria-press={isSwitchedOn}
+        aria-pressed={isSwitchedOn}
         className={clsx(
           "ml-2 h-10 w-18 rounded-full cursor-pointer transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2",
           isSwitchedOn ? "bg-amber-100" : "bg-stone-600",
