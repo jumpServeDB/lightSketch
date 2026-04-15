@@ -1,10 +1,13 @@
 import clsx from "clsx";
 import { useContext } from "react";
 import ThemeContext from "../contexts/DarkModeContext";
+import heavyWork from "../utils/heavyWork";
 
 const LogoCard = (props) => {
   const { description, title, logo, name } = props;
   const themeContext = useContext(ThemeContext);
+
+  const work = heavyWork(100000);
 
   const openWebsite = () => {
     window.open(

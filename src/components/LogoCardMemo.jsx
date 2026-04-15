@@ -1,7 +1,11 @@
 import React from "react";
+import heavyWork from "../utils/heavyWork";
+import { useMemo } from "react";
 
 const LogoCardMemo = (props) => {
   const { description, title, logo, name } = props;
+
+  const work = useMemo(() => heavyWork(100000), [name]);
 
   const openWebsite = () => {
     window.open(
@@ -15,7 +19,7 @@ const LogoCardMemo = (props) => {
     <article
       aria-labelledby={name}
       className={
-        "rounded-2xl p-6 shadow-lg hover:shadow-2xl  flex flex-col group w-full max-w-md m-4 " +
+        "backdrop-blur-lg rounded-2xl p-6 shadow-lg hover:shadow-2xl  flex flex-col group w-full max-w-md m-4 " +
         // static string with Tailwind dark: variants to allow memoization.
         "bg-white/30 border border-white/50 hover:bg-white/40 text-slate-700 " +
         "dark:bg-slate-700 dark:hover:bg-slate-600 dark:text-slate-200"

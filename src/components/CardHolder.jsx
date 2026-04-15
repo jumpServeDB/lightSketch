@@ -32,7 +32,7 @@ const CardHolder = () => {
     () =>
       logos.map((item, i) => (
         <LogoCardMemo
-          key={`${item.name}-${item.variant}-${item.version}-${i}-memo`}
+          key={`${item.name}-${item.variant}-${item.version}-${i}`}
           description={item.example_description}
           title={item.example_title}
           logo={item.logo}
