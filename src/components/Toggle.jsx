@@ -20,7 +20,7 @@ const Toggle = (props) => {
         type="button"
         aria-pressed={isSwitchedOn}
         className={clsx(
-          "ml-2 h-10 w-18 rounded-full cursor-pointer transition-all duration-300 overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2",
+          "ml-2 h-10 w-18 rounded-full cursor-pointer transition-all duration-100 overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2",
           isSwitchedOn ? "bg-amber-100" : "bg-stone-600",
         )}
         onClick={ToggleSwitch}
@@ -28,7 +28,7 @@ const Toggle = (props) => {
         <div
           aria-hidden="true"
           className={clsx(
-            "h-10 w-10 rounded-full bg-slate-500 transform transition-transform duration-300",
+            "h-10 w-10 rounded-full bg-slate-500 transform transition-transform duration-100",
             isSwitchedOn ? "translate-x-8" : "translate-x-0",
           )}
         />
