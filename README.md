@@ -1,16 +1,13 @@
-# React + Vite
+Title: Lightsketch
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Link: https://lightsketch.netlify.app/
 
-Currently, two official plugins are available:
+Purpose: A demo project for my application with Darktrace. It illustrates ... 1. Translate designs accurately from Figma 2. Provide accessibility features for an inclusive user experience 3. Use memoization to enhance performance. 4. Integrate with a backend API that isn't my own. 5. Build re-usable components (Toggle, LogoCard) 6. Proficiency with Git 7. Documentation through this README and descriptive commit messages.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Overview:
 
-## React Compiler
+The app demonstrates simply the performance difference when loading ~1300 components with and without useMemo. Changing the Theme to dark without memoization (and referencing context directly in the component) results in lag and jankiness. Activating the memoization allows for faster, smoother performance.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Special thanks to the providers of the Logotypes api: https://logotypes.dev/
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Tech Stack: Vite/React/Tailwind/JS. Hosted on Netlify.
