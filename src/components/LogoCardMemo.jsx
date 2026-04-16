@@ -5,7 +5,7 @@ import { useMemo } from "react";
 const LogoCardMemo = (props) => {
   const { description, title, logo, name } = props;
 
-  const work = useMemo(() => heavyWork(100000), [name]);
+  const work = useMemo(() => heavyWork(50000), [name]);
 
   const openWebsite = () => {
     window.open(

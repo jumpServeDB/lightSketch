@@ -7,7 +7,7 @@ const LogoCard = (props) => {
   const { description, title, logo, name } = props;
   const themeContext = useContext(ThemeContext);
 
-  const work = heavyWork(100000);
+  const work = heavyWork(50000);
 
   const openWebsite = () => {
     window.open(
