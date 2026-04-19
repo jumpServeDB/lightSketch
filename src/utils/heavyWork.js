@@ -1,4 +1,4 @@
-const heavyWork = (iterations = 50000) => {
+const heavyWork = (iterations = 18000) => {
   let x = 0;
   for (let i = 0; i < iterations; i++) {
     x += Math.sqrt(i) % 1;

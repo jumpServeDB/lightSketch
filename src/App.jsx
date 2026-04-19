@@ -38,6 +38,18 @@ const App = () => {
           )}
         >
           <h1 className="text-4xl my-4">Lightsketch</h1>
+          <p className="px-10 mb-4 text-center">
+            Memoization is an optimization technique where an algorithm
+            maintains a record of previous inputs and their calculated results.
+            Instead of recalculating known results, it will simply look up what
+            it got last time - at O(1) time complexity.
+          </p>
+          <p className="px-10 mb-4 text-center">
+            The difference is palpable in this example. Switching between Light
+            and Dark mode should feel laggy (depends on your device CPU) until
+            you turn on the "Memo" switch. Then switching themes should be
+            basically instantaneous.
+          </p>
           <ControlPanel />
           <CardHolder />
         </main>
